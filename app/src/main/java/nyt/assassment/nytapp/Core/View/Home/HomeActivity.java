@@ -243,7 +243,7 @@ public class HomeActivity extends AppCompatActivity
         return activeNetwork != null &&
                 activeNetwork.isConnectedOrConnecting();
     }
-    private List<Results> getFilteredList(String searchword){
+    public List<Results> getFilteredList(String searchword){
         List<Results> filteredList = new ArrayList<>();
         for (Results results: articleModel.getResults()){
             if(results.getTitle().toLowerCase().contains(searchword.toLowerCase())
